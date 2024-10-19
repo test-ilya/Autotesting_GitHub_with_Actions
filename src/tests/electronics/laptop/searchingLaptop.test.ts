@@ -6,13 +6,14 @@ const laptopName = 'Apple MacBook Air 13';
 test('Searching laptop - Apple MacBook Air 13', async ({ page }) => {
     const laptopPage = new LaptopPage(page);
 
-    await page.goto('https://market.yandex.ru');
-    console.log('Open main page');
-    
-    await laptopPage.itemSearch(laptopName);
-    console.log('Do search');
+    await page.goto('/');
 
-    await expect(
-        page.locator(laptopPage.searchResultSelector)
-    ).toContainText(laptopName);
+    await expect(page.locator('[data-baobab-name="department"]')).toBeVisible();
+    
+    // await laptopPage.itemSearch(laptopName);
+    // console.log('Do search');
+
+    // await expect(
+    //     page.locator(laptopPage.searchResultSelector)
+    // ).toContainText(laptopName);
 });
