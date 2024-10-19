@@ -8,7 +8,7 @@ test('Searching laptop - Apple MacBook Air 13', async ({ page }) => {
 
     await page.goto('/');
 
-    await expect(page).toHaveURL('https://market.yandex.ru/');
+    await expect(page).toHaveURL('https://github.com');
     
     // await laptopPage.itemSearch(laptopName);
     // console.log('Do search');
