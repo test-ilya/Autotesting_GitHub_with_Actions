@@ -3,7 +3,7 @@ import { Page } from '@playwright/test';
 export class MainPage {
     private readonly catalogBtnSelector = '[data-baobab-name="catalog"]';
     private readonly catalogContentSelector = '[data-zone-name="catalog-content"]';
-    private readonly searchStringSelector = '[id="header-search"]';
+    public readonly searchStringSelector = '[id="header-search"]';
     private readonly searchBtnSelector = '[data-auto="search-button"]';
     public readonly searchResultSelector = '[data-zone-name="searchResults"]';
 

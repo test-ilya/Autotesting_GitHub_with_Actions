@@ -8,7 +8,7 @@ test('Searching laptop - Apple MacBook Air 13', async ({ page }) => {
 
     await page.goto('/');
 
-    await expect(page.locator('[data-baobab-name="department"]')).toBeVisible();
+    await expect(page.locator(laptopPage.searchStringSelector)).toBeVisible();
     
     // await laptopPage.itemSearch(laptopName);
     // console.log('Do search');
